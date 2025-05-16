@@ -7,6 +7,7 @@ export class Anime {
   categorie: string;
   studio: string;
   img: string;
+  seasons: [];
 
   constructor(
     id: number,
@@ -17,6 +18,7 @@ export class Anime {
     categorie: string,
     studio: string,
     img: string,
+    seasons: [],
   ) {
     this.id = id;
     this.name = name;
@@ -26,5 +28,6 @@ export class Anime {
     this.categorie= categorie,
     this.studio= studio,
     this.img = img;
+    this.seasons = seasons
   }
  }

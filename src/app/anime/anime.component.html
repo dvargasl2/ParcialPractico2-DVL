@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <h2 class="mb-4">Anime List</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let anime of animes" class="col">
+      <div class="card h-100 shadow-sm">
+        <img [src]="anime.image" [alt]="anime.name" class="card-img-top" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{ anime.name }}</h5>
+          <div class="d-flex align-items-center mb-2">
+            <div class="me-2">
+              <i class="fas fa-star text-warning"></i>
+              {{ calculateAverageRating(anime) }}
+            </div>
+            <div class="text-muted">
+              Categories: {{ anime.categories }}
+            </div>
+          </div>
+          <p class="card-text text-muted">
+            # seasons: {{ calculateTotalSeasons(anime) }}
+          </p>
+          <button class="btn btn-primary">More information</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
