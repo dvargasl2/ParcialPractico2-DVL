@@ -23,10 +23,12 @@
     <div class="col-3">
       <div class="thumb">
         <img
-          class="img-fluid"
+          class="img-fluid border"
           src="{{ animeDetail.img }}"
           alt="{{ animeDetail.name }}"
         />
+        <button class="btn btn-primary" (click)="goBack()">Regresar</button>
+
       </div>
     </div>
   </div>
